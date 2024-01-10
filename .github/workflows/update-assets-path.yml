@@ -1,0 +1,62 @@
+name: Auto assets path fix
+
+env:
+  GH_USERNAME: 'GitHub Action'
+  GH_EMAIL: 'action@github.com'
+  REPO_NAME: ${{ github.event.repository.name }}
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  fix-assets-paths:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Configure Git
+        run: |
+          git config --global user.name $GH_USERNAME
+          git config --global user.email $GH_EMAIL
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Update paths in html files
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: '"/1/'
+          replace: '"/${{ env.REPO_NAME }}/1/'
+          include: "*.html"
+          regex: false
+
+      - name: Update paths in JS files
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: '"/1/'
+          replace: '"/${{ env.REPO_NAME }}/1/'
+          include: "*.js"
+          regex: false
+      
+      - name: Update asset paths in JS files
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: '/assets/'
+          replace: '/${{ env.REPO_NAME }}/assets/'
+          include: "*.js"
+          regex: false
+
+      - name: Update asset paths in CSS files
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: '/assets/'
+          replace: '/${{ env.REPO_NAME }}/assets/'
+          include: "*.css"
+          regex: false
+
+      - name: Commit and Push
+        run: |
+          git add .
+          git commit -m "auto path fix - $(date +"%Y-%m-%dT%H:%M:%S%z")"
+          git push
