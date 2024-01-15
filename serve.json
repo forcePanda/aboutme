@@ -2,19 +2,19 @@
  "rewrites": [
   {
    "source": "/1/bundle/esm/l/en-US/bi/0/module/mi/c/app/v/1_0_0",
-   "destination": "/1/bundle/esm/l/en-US/bi/0/module/mi/c/app/v/1_0_0/s/37bdac362d3d40cdc9325afdff0476b7dd75f21d/bundle_c_app.js"
+   "destination": "/1/bundle/esm/l/en-US/bi/0/module/mi/c/app/v/1_0_0/s/0b73fefffb023090866da65afdae6e8584d1a510/bundle_c_app.js"
   },
   {
    "source": "/1/bundle/esm/l/en-US/bi/0/module/mi/c%2Fapp%2Fv%2F1_0_0",
-   "destination": "/1/bundle/esm/l/en-US/bi/0/module/mi/c/app/v/1_0_0/s/37bdac362d3d40cdc9325afdff0476b7dd75f21d/bundle_c_app.js"
+   "destination": "/1/bundle/esm/l/en-US/bi/0/module/mi/c/app/v/1_0_0/s/0b73fefffb023090866da65afdae6e8584d1a510/bundle_c_app.js"
   },
   {
    "source": "/1/bundle/esm/l/en-US/bi/0/module/mi/c/app",
-   "destination": "/1/bundle/esm/l/en-US/bi/0/module/mi/c/app/v/1_0_0/s/37bdac362d3d40cdc9325afdff0476b7dd75f21d/bundle_c_app.js"
+   "destination": "/1/bundle/esm/l/en-US/bi/0/module/mi/c/app/v/1_0_0/s/0b73fefffb023090866da65afdae6e8584d1a510/bundle_c_app.js"
   },
   {
    "source": "/1/bundle/esm/l/en-US/bi/0/module/mi/c%2Fapp",
-   "destination": "/1/bundle/esm/l/en-US/bi/0/module/mi/c/app/v/1_0_0/s/37bdac362d3d40cdc9325afdff0476b7dd75f21d/bundle_c_app.js"
+   "destination": "/1/bundle/esm/l/en-US/bi/0/module/mi/c/app/v/1_0_0/s/0b73fefffb023090866da65afdae6e8584d1a510/bundle_c_app.js"
   },
   {
    "source": "/1/bundle/esm/l/en-US/bi/0/module/mi/lwc/v/5_3_0",
